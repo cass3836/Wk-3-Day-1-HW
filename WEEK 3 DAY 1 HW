@@ -1,0 +1,43 @@
+Return ALL the data in the 'movies' table.
+  SELECT * FROM movies
+
+Return ONLY the name column from the 'people' table
+  SELECT name FROM people
+
+Oops! Someone at CodeClan spelled Stephen's name wrong! Change it to reflect the proper spelling ('Steven Raferty' should be 'Stephen Rafferty').
+  UPDATE people
+  SET name = 'Steven Raferty'
+  WHERE name = 'Stephen Raferty'
+
+Return ONLY your name from the 'people' table.
+  SELECT name FROM people
+  WHERE name = 'Cassia Lonsdale'
+
+  --OR
+
+  SELECT name FROM people
+  WHERE id = 4
+
+The cinema is showing 'Batman Begins', but Batman is DC, not Marvel! Delete the entry from the 'movies' table.
+  DELETE FROM movies
+  WHERE title = 'Batman Begins'
+
+Create a new entry in the 'people' table with the name of one of the instructors.
+  INSERT INTO people (name) VALUES ('Colin');
+  INSERT INTO people (name) VALUES ('Keith')
+
+Antonio Horta Osario has decided to hijack our movie evening! Remove him from the table of people.
+  DELETE FROM people
+  WHERE name = 'Antonio Horta Osario'
+
+The cinema has just heard that they will be holding an exclusive midnight showing of 'Avengers: Infinity War'! Create a new entry in the 'movies' table to reflect this.
+  INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Infinity War', 2018, '00:00')
+
+The cinema would also like to make the Guardians movies a back to back feature. Find out the show time of "Guardians of the Galaxy" and set the show time of "Guardians of the Galaxy 2" to start two hours later.
+  UPDATE movies
+  SET show_time = '20:55'
+  WHERE title = 'Guardians of the Galaxy 2'
+
+Extension: Research how to delete multiple entries from your table in a single command.
+  DELETE FROM movies
+  WHERE title = 'Iron Man' or title = 'Iron Man 2' or title = 'Iron Man 3'
